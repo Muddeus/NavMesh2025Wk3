@@ -21,8 +21,8 @@ NavMeshProjectSettings:
     cost: 1
   - name: 
     cost: 1
-  - name: 
-    cost: 1
+  - name: Grass
+    cost: 3
   - name: 
     cost: 1
   - name: 
