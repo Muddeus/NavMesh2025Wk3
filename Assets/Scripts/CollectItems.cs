@@ -25,7 +25,7 @@ public class CollectItems : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentCollectable == null && collectables.Count > 0)
+        if (currentCollectable == null && collectables.Count > 0)
         {
             int randomIndex = Random.Range(0, collectables.Count);
             currentCollectable = collectables[randomIndex];
@@ -38,7 +38,7 @@ public class CollectItems : MonoBehaviour
             agent.destination = currentCollectable.transform.position;
         }
 
-        if(collectables.Count == 0)
+        if (collectables.Count == 0)
         {
             door.NonagonInfinity();
         }

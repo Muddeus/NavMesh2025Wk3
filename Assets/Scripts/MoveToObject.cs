@@ -5,6 +5,7 @@ public class MoveToObject : MonoBehaviour
 {
     public GameObject moveToObject;
     private NavMeshAgent agent;
+    public SlidingDoor SlidingDoor;
 
     void Start()
     {
@@ -14,9 +15,13 @@ public class MoveToObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent != null && moveToObject != null)
+        if ()
         {
-            agent.destination = moveToObject.transform.position;
+            if (agent != null && moveToObject != null)
+            {
+                agent.destination = moveToObject.transform.position;
+            }
         }
+
     }
 }
