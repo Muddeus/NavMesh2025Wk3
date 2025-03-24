@@ -38,7 +38,7 @@ public class CollectItems : MonoBehaviour
             agent.destination = currentCollectable.transform.position;
         }
 
-        if (collectables.Count == 0)
+        if (collectedItems == 3)
         {
             door.NonagonInfinity();
         }
@@ -50,7 +50,7 @@ public class CollectItems : MonoBehaviour
 
         if (other.gameObject.tag == "Collectable")
         {
-            Debug.Log("bebebfe");
+            Debug.Log("loot get");
             collectedItems++;
             Destroy(other.gameObject);
         }

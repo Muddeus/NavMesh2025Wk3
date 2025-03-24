@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -5,23 +6,20 @@ public class MoveToObject : MonoBehaviour
 {
     public GameObject moveToObject;
     private NavMeshAgent agent;
-    public SlidingDoor SlidingDoor;
+    public SlidingDoor door;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if ()
+        if (door.transform.position.y <= 0)
         {
-            if (agent != null && moveToObject != null)
-            {
-                agent.destination = moveToObject.transform.position;
-            }
-        }
+            Debug.Log("movetosphere " + moveToObject.transform.position);
 
+            agent.destination = moveToObject.transform.position;
+        }
     }
 }
